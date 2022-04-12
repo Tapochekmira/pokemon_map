@@ -1,3 +1,5 @@
-from django.db import models  # noqa F401
+from django.db import models
 
-# your models here
+
+class Pokemon(models.Model):
+    name = models.CharField(max_length=100)
