@@ -21,3 +21,6 @@ class PokemonEntity(models.Model):
     stamina = models.IntegerField(default=1)
     pokemon = models.ForeignKey(Pokemon, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return f'{self.pokemon.name} по координатам ' \
+               f'{self.longitude},{self.latitude}'
