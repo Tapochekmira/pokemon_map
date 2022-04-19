@@ -6,7 +6,12 @@ class Pokemon(models.Model):
     en_name = models.CharField(max_length=100)
     jp_name = models.CharField(max_length=100)
     description = models.TextField()
-    previous_evolution = models.ForeignKey('self', on_delete=models.SET_NULL, null=True)
+    previous_evolution = models.ForeignKey(
+        'self',
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name='next_evolution',
+    )
     image = models.ImageField(null=True)
 
     def __str__(self):
