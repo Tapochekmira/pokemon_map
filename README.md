@@ -24,6 +24,16 @@
 pip install -r requirements.txt
 ```
 
+Создайте миграции базы данных командой
+```sh
+python manage.py makemigrations
+```
+
+Загрузите их командой
+```sh
+python manage.py migrate
+```
+
 Запустите разработческий сервер
 
 ```sh
